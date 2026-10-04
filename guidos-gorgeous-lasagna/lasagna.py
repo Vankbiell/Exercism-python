@@ -15,5 +15,5 @@ def preparation_time_in_minutes(number_of_layers):
 
 
 def elapsed_time_in_minutes(number_of_layers, elapsed_bake_time):
-    """Calcula o tempo total decorrido na cozinha (preparo + forno)."""
+    """Calcula o tempo total usado na cozinha (preparo + forno). """
     return preparation_time_in_minutes(number_of_layers) + elapsed_bake_time
