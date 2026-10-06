@@ -8,52 +8,14 @@ Overview of exchanging currency when travelling: https://www.compareremit.com/mo
 
 
 def exchange_money(budget, exchange_rate):
-    """Calculate estimated value after exchange.
-
-    Parameters:
-        budget (float): The amount of money you are planning to exchange.
-        exchange_rate (float): The unit value of the foreign currency.
-
-    Returns:
-        float: The exchanged value of the foreign currency you can receive.
-
-    Examples:
-        >>> exchange_money(127.5, 1.2)
-        106.25
-
-        >>> exchange_money(200, 1.10)
-        181.82
-
-    This function calculates and returns the (estimated) value of the exchanged currency.
-
-    """
-
-    pass
+    """Calculate estimated value after exchange."""
+    return budget / exchange_rate
 
 
 def get_change(budget, exchanging_value):
-    """Calculate currency left after an exchange.
-
-    Parameters:
-        budget (float): The amount of money you own.
-        exchanging_value (float): The amount of your money you want to exchange now.
-
-    Returns:
-        float: The amount left of your starting currency after the exchange
-
-    Examples:
-        >>> get_change(127.5, 120.0)
-        7.5
-
-        >>> get_change(300.75, 150.25)
-        150.50
-
-    This function calculates and returns the amount of money left over from the budget
-    after an exchange.
-
-    """
-
-    pass
+    """Calculate currency left after an exchange."""
+    return budget % exchanging_value
+    
 
 
 def get_value_of_bills(denomination, number_of_bills):
