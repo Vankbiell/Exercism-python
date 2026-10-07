@@ -36,4 +36,5 @@ def get_leftover_of_bills(amount, denomination):
 def exchangeable_value(budget, exchange_rate, spread, denomination):
     """Calculate the maximum value of the new currency."""
     exchange_rate = exchange_rate + (exchange_rate * (spread / 100))
+    budget = budget % denomination
     return int(budget * exchange_rate)
