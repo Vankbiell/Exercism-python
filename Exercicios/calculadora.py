@@ -1,5 +1,3 @@
-n1 = float(input("Primeiro número: "))
-n2 = float(input("Segundo número: "))
-
-res = n1 % n2
-print(res)
+res = 1.2 + (1.2 * (10 / 100))
+res1 = int(127.25 /  res) 
+print(res, res1)
