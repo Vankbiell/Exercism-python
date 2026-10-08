@@ -25,7 +25,7 @@ def get_value_of_bills(denomination, number_of_bills):
 
 def get_number_of_bills(amount, denomination):
     """Calculate the number of currency units (bills) within the amount."""
-    return amount // denomination 
+    return amount // denomination    
 
 
 def get_leftover_of_bills(amount, denomination):
