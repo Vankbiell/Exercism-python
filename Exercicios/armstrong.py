@@ -42,7 +42,7 @@ def is_armstrong_number(number):
        print ('Quantidade de Dígitos',qtd_dig)
        print ('atualização dos números',num)
     '''Criação de variveis como o num para manter o valor intacto e
-    total para '''
+    total para somatório para verificar se o número é igual ao number'''
     num = number
     total = 0
 
@@ -50,8 +50,11 @@ def is_armstrong_number(number):
        digit = num % 10
        total += digit ** qtd_dig
        num //= 10 
+       print('Verificar o ultimo digito',digit)
+       print('Verificar as sómatorias',total)
+       print('Divisão de resto',num)
 
     return total == number
        
        
-is_armstrong_number(300)
+is_armstrong_number(153)
