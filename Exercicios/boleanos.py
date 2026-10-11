@@ -22,13 +22,13 @@ def reactor_efficiency(vol, cor, the):
 
     '''Otimização do código'''
     if percent >= 80:
-        return print('green')
+        return 'green'
     elif percent >= 60:
-        return print('orange')
+        return 'orange'
     elif percent >= 30:
-        return print('red')
+        return 'red'
     else:
-        return print('black')
+        return 'black'
     
 ''' if percent >= 80:
         return print('green')
