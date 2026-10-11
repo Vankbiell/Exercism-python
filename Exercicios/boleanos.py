@@ -22,13 +22,13 @@ def reactor_efficiency(vol, cor, the):
 
     '''Otimização do código'''
     if percent >= 80:
-        return 'green'
+        return print('green')
     elif percent >= 60:
-        return 'orange'
+        return print('orange')
     elif percent >= 30:
-        return 'red'
+        return print('red')
     else:
-        return 'black'
+        return print('black')
     
 ''' if percent >= 80:
         return print('green')
@@ -39,10 +39,19 @@ def reactor_efficiency(vol, cor, the):
     else:
         return print('black')'''
 
-
-
-
-
 reactor_efficiency(vol, cor, the)
 
 '''-----Terceira parte---------------------------------------------------------------------------------------'''
+temp = 1000
+n_p = 30
+thr = 5000
+def fail_safe(temp, n_p, thr):
+    tt = temp * n_p
+    if tt < thr * 0.9:
+        return print('LOW')
+    elif tt < thr * 0.1 and tt > 0:
+        return print('NORMAL')
+    else:
+        return print('DANGER')
+
+fail_safe(temp, n_p, thr)
