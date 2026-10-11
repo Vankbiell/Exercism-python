@@ -1,0 +1,38 @@
+# Números de Armstrong
+
+Bem-vindo ao Números de Armstrong na trilha Python do Exercism.
+Se você precisar de ajuda para rodar os testes ou enviar seu código, confira o `HELP.md`.
+
+## Instructions
+
+Um [número de Armstrong][armstrong-number] é um número que é a soma dos seus próprios dígitos, cada um elevado à potência da quantidade de dígitos.
+
+Por exemplo:
+
+- 9 é um número de Armstrong, porque `9 = 9^1 = 9`
+- 10 _não_ é um número de Armstrong, porque `10 != 1^2 + 0^2 = 1`
+- 153 é um número de Armstrong, porque: `153 = 1^3 + 5^3 + 3^3 = 1 + 125 + 27 = 153`
+- 154 _não_ é um número de Armstrong, porque: `154 != 1^3 + 5^3 + 4^3 = 1 + 125 + 64 = 190`
+
+Escreva um código para determinar se um número é um número de Armstrong.
+
+[armstrong-number]: https://en.wikipedia.org/wiki/Narcissistic_number
+
+## Source
+
+### Created by
+
+- @pheanex
+
+### Contributed to by
+
+- @BethanyG
+- @cmccandless
+- @Dog
+- @K4cePhoenix
+- @sukovanej
+- @tqa236
+
+### Based on
+
+Wikipedia - https://en.wikipedia.org/wiki/Narcissistic_number
