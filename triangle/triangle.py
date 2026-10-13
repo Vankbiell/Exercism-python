@@ -1,10 +1,16 @@
 def equilateral(sides):
-    pass
-
+    for side in sides:
+        if side <= 0:
+            return False
+    once = sides[0]
+    for side in sides:
+        if side != once:
+            return False
+    return True
 
 def isosceles(sides):
-    pass
+    return sides
 
 
 def scalene(sides):
-    pass
+    return sides
