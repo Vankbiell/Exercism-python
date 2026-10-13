@@ -31,4 +31,16 @@ def isosceles(sides):
 
 
 def scalene(sides):
-    return sides
+    '''Saber se existe algum número menor ou igual a zero'''
+    for side in sides:
+        if side <= 0:
+            return False
+    # Otimização de armazenamento de cada varivél dentro de cada indice do vetor
+    once_side, second_side, third_side = sides
+
+    if (once_side + second_side) <= third_side or (once_side + third_side) <= second_side or (second_side + third_side) <= once_side:
+        return False
+    if once_side != second_side and once_side != third_side and second_side != third_side:
+        return True
+    return False
+        
