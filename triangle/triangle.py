@@ -4,12 +4,18 @@ def equilateral(sides):
     for side in sides:
         if side <= 0:
             return False
+
+    #Otimização do código feito abaixo utilizando all()
+    once_side = sides[0]
+    return all(side == once_side for side in sides )
+
+
     #Estrutura de Repetição para percorrer o vetor e saber se existe numeros diferentes ao primeiro armazenado
-    once = sides[0]
-    for side in sides:
-        if side != once:
-            return False
-    return True
+    #once = sides[0]
+    #for side in sides:
+        #if side != once:
+            #return False
+    #return True
 
 def isosceles(sides):
     '''Saber se existe algum número menor ou igual a zero'''
