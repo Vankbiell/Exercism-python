@@ -17,7 +17,7 @@ def response(hey_bob):
         return "Calm down, I know what I'm doing!"
 
     # Se a variavél só tem espaços com o .isspace() ; Verifica se não 
-    if hey_bob.isspace() or not hey_bob:
+    if hey_bob.isspace() or hey_bob == None:
         return  'Fine. Be that way!'
     
     return 'Whatever'
