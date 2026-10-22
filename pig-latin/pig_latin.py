@@ -8,6 +8,9 @@ def translate(text):
         # Então ele retorna o texto mais "ay".
         return text + "ay"
 
+    if (not text[0] in vogais and text[1] == "y") or (not text[0:1] in vogais and text[2] == "y"):
+        return 
+
     # Se o texto começar com "qu"
     if text.startswith("qu"):
         # Então retorna o texto depois da posição 2 mais o texto da posição 0 até a 2 junto do "ay".
