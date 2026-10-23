@@ -8,11 +8,8 @@ def translate(text):
         # Então ele retorna o texto mais "ay".
         return text + "ay"
 
-    if (not text[0] in vogais and text[1] == "y") or (not text[0:1] in vogais and text[2] == "y"):
-        return 
-
     # Se o texto começar com "qu"
-    if text.startswith("qu"):
+    if text.startswith("qu") or (not text[0] in vogais and text[1] == "q" and text[2] == "u"):
         # Então retorna o texto depois da posição 2 mais o texto da posição 0 até a 2 junto do "ay".
         return text[2:] + text[0:2] + "ay"
     
@@ -32,4 +29,4 @@ def translate(text):
         return text[1:] + text[0] + "ay"
     
 
-print(translate("queen"))
+print(translate("square"))
