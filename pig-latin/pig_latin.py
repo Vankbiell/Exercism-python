@@ -36,5 +36,4 @@ def translate(text):
         return text[2:] + text[0:2] + "ay"
 
     # Retorno padrão (quando começa apenas com 1 consoante):
-    # Resolve o aviso R1710 garantindo que a função sempre retorne uma string no fim.
     return text[1:] + text[0] + "ay"
