@@ -40,7 +40,15 @@ def higher_card(card_one, card_two):
         str or tuple: The resulting tuple contains both cards if they are of equal value.
     """
 
-    pass
+    value_one = value_of_card(card_one)
+    value_two = value_of_card(card_two)
+    if value_one > value_two:
+        return card_one
+    if value_two > value_one:
+        return card_two
+    return card_one, card_two
+    
+
 
 
 def value_of_ace(card_one, card_two):
