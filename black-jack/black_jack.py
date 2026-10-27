@@ -68,7 +68,9 @@ def value_of_ace(card_one, card_two):
 
     if "A" in (card_one, card_two):
         return 1
-    
+    if value_of_card(card_one) + value_of_card(card_two) <= 10:
+        return 11
+    return 1
 
 
 def is_blackjack(card_one, card_two):
