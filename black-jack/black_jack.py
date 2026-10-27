@@ -66,7 +66,9 @@ def value_of_ace(card_one, card_two):
         int: Either 1 or 11, which is the value of the upcoming ace card.
     """
 
-    pass
+    if "A" in (card_one, card_two):
+        return 1
+    
 
 
 def is_blackjack(card_one, card_two):
