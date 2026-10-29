@@ -87,8 +87,9 @@ def is_blackjack(card_one, card_two):
     Returns:
         bool: Is the hand is a blackjack (two cards worth 21).
     """
-
-    pass
+    tenCards = ('10','J','K','Q')
+    # Tava fazendo uma estrutura de decisão, mas dessa forma fica mais otimizado utilizando do return em uma comparação na mesma linha.
+    return ((card_one == 'A' and card_two in tenCards) or (card_two == 'A' and card_one in tenCards))
 
 
 def can_split_pairs(card_one, card_two):
