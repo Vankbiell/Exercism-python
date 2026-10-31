@@ -31,8 +31,8 @@ def make_word_groups(vocab_words):
         'en :: enclose :: enjoy :: enlighten'.
 
     """
-
-    pass
+    separator = ' :: ' + vocab_words[0]
+    return separator.join(vocab_words[1:])
 
 
 def remove_suffix_ness(word):
