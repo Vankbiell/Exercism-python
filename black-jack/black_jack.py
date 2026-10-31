@@ -18,9 +18,10 @@ def value_of_card(card):
         2.  'A' (ace card) = 1
         3.  '2' - '10' = numerical value.
     """
-    if card in ("J", "Q", "K"):
+    # Utilizando as lista para conjunto, o python consegue analisar mais rápido o grupo.
+    if card in {'J', 'Q', 'K'}:
         return 10
-    if card == "A":
+    if card == 'A':
         return 1
     return int(card)
 
@@ -66,7 +67,7 @@ def value_of_ace(card_one, card_two):
         int: Either 1 or 11, which is the value of the upcoming ace card.
     """
 
-    if "A" in (card_one, card_two):
+    if 'A' in (card_one, card_two):
         return 1
     if value_of_card(card_one) + value_of_card(card_two) <= 10:
         return 11
@@ -87,9 +88,10 @@ def is_blackjack(card_one, card_two):
     Returns:
         bool: Is the hand is a blackjack (two cards worth 21).
     """
-    tenCards = ('10','J','K','Q')
+
+    ten_cards = ('10','J','K','Q')
     # Tava fazendo uma estrutura de decisão, mas dessa forma fica mais otimizado utilizando do return em uma comparação na mesma linha.
-    return ((card_one == 'A' and card_two in tenCards) or (card_two == 'A' and card_one in tenCards))
+    return ((card_one == 'A' and card_two in ten_cards) or (card_two == 'A' and card_one in ten_cards))
 
 
 def can_split_pairs(card_one, card_two):
@@ -102,9 +104,6 @@ def can_split_pairs(card_one, card_two):
    Returns:
         bool: Can the hand be split into two pairs? (i.e. cards are of the same value).
     """
-
-    tenCards = ('10','J','K','Q')
-
     if value_of_card(card_one) == value_of_card(card_two):
         return True
     return False
@@ -121,4 +120,6 @@ def can_double_down(card_one, card_two):
         bool: Can the hand can be doubled down? (i.e. totals 9, 10 or 11 points).
     """
 
-    pass
+    if value_of_card(card_one) + value_of_card(card_two) in {9,10,11}:
+        return True
+    return False
