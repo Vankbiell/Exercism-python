@@ -103,7 +103,11 @@ def can_split_pairs(card_one, card_two):
         bool: Can the hand be split into two pairs? (i.e. cards are of the same value).
     """
 
-    pass
+    tenCards = ('10','J','K','Q')
+
+    if value_of_card(card_one) == value_of_card(card_two):
+        return True
+    return False
 
 
 def can_double_down(card_one, card_two):
