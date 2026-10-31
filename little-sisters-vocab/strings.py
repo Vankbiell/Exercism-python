@@ -11,7 +11,7 @@ def add_prefix_un(word):
         str: Root word prepended with 'un'.
     """
 
-    pass
+    return 'un' + word
 
 
 def make_word_groups(vocab_words):
