@@ -21,5 +21,12 @@ def make_word_groups(vocab_words):
     return vocab_words[0] + ' :: ' + words_comple
 
 
-vocab_words = 'auto', 'didactic', 'graph', 'mate', 'chrome', 'centric', 'complete','echolalia', 'encoder', 'biography'
-print(make_word_groups(vocab_words))
+"""vocab_words = 'auto', 'didactic', 'graph', 'mate', 'chrome', 'centric', 'complete','echolalia', 'encoder', 'biography'
+print(make_word_groups(vocab_words))"""
+
+def remove_suffix_ness(word):
+    for palavra in word:
+        texto = palavra - 'ness'
+    return word
+word = 'heaviness', 'sadness', 'softness', 'crabbiness', 'lightness', 'artiness', 'edginess'
+print(remove_suffix_ness(word))

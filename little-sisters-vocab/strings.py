@@ -54,7 +54,7 @@ def remove_suffix_ness(word):
 
     """
 
-    pass
+    
 
 
 def adjective_to_verb(sentence, index):
